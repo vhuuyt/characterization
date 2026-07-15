@@ -4,16 +4,16 @@ disqus:
   disqus_shortname: 'https-lenpaul-github-io-lagrange'
 
 # If you are not using Google Analytics, please change 'google-ID' to an empty string
-google-ID: 'UA-112060364-1'
+google-ID: ''
 
 menu:
 - {name: '关于我们',   url: '/about'}
-- {name: '案例分享', url: '/cases/'}
+- {name: '案例分享', url: '/cases'}
 - {name: '联系我们', url: '/contact'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
-- {icon: 'wechat',     clipboard: '18813109362'}
+- {icon: 'wechat',     link: '18813109362'}
 - {icon: 'phone',      link: 'tel:18813109362'}
 # - {icon: 'github',     link: 'https://www.github.com/lenpaul'}
 # - {icon: 'twitter',    link: 'https://twitter.com/paululele'}
@@ -24,8 +24,8 @@ social:
 
 # Customize site text
 pagination:
-  next_page: 'Newer'
-  previous_page: 'Older'
+  next_page: '下一页'
+  previous_page: '上一页'
 
 sharing_button_prompt: 'Feel free to share!'
 
