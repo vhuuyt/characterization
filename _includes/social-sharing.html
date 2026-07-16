@@ -1,5 +1,28 @@
 <div class="post-date">{{ site.data.settings.sharing_button_prompt }}</div>
 <div class="sharing-icons">
-  <a href="https://twitter.com/intent/tweet?text={{ page.title }}&amp;url={{ page.url | absolute_url }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-  <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}&amp;title={{ page.title }}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+  <button class="wechat-share" type="button" data-share-url="{{ page.url | absolute_url }}" aria-label="复制文章链接，以便分享到微信">
+    <i class="fa fa-weixin" aria-hidden="true"></i>
+    <span>复制链接</span>
+  </button>
+  <span class="share-status" aria-live="polite"></span>
 </div>
+<script>
+  document.querySelectorAll('.wechat-share').forEach(function (button) {
+    button.addEventListener('click', function () {
+      var url = button.getAttribute('data-share-url');
+      var status = button.parentNode.querySelector('.share-status');
+
+      function copied() {
+        status.textContent = '链接已复制，请在微信中粘贴发送。';
+      }
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(url).then(copied, function () {
+          status.textContent = '请复制此链接：' + url;
+        });
+      } else {
+        status.textContent = '请复制此链接：' + url;
+      }
+    });
+  });
+</script>

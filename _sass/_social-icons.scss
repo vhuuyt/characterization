@@ -6,6 +6,32 @@
   padding-right: 10px;
 }
 
+.wechat-share {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+.wechat-share .fa-weixin {
+  padding: 5px;
+  color: #07c160;
+}
+
+.wechat-share span {
+  font-size: 0.9rem;
+}
+
+.share-status {
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: $light-gray-color;
+  font-family: $sans-serif-font-family;
+  font-size: 0.8rem;
+}
+
 @mixin social-media-icon($color, $transition){
   -webkit-transition: $transition;
   -o-transition: $transition;
