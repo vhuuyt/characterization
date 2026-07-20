@@ -8,12 +8,12 @@ google-ID: ''
 
 menu:
 - {name: '关于我们',   url: '/about'}
-- {name: '案例分享', url: '/cases'}
+- {name: '测试清单', url: '/cases'}
 - {name: '联系我们', url: '/contact'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
-- {icon: 'wechat',     link: '18813109362'}
+- {icon: 'wechat',     link: 'tel:18813109362'}
 - {icon: 'phone',      link: 'tel:18813109362'}
 # - {icon: 'github',     link: 'https://www.github.com/lenpaul'}
 # - {icon: 'twitter',    link: 'https://twitter.com/paululele'}
