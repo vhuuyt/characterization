@@ -9,7 +9,6 @@ google-ID: ''
 menu:
 - {name: '关于我们',   url: '/about'}
 - {name: '测试清单', url: '/cases'}
-- {name: '联系我们', url: '/contact'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:

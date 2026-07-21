@@ -12,6 +12,7 @@
 
 # jekyll-paginate configuration
 paginate:            9
+related_posts_limit: 6
 
 # Build settings
 markdown:            kramdown

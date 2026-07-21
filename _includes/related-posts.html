@@ -1,14 +1,21 @@
 {% assign listed_posts_urls = page.url | split: ' ' %}
+{% assign related_posts_limit = site.related_posts_limit | default: 6 %}
+{% assign related_posts_count = 0 %}
 {% capture related_post_items %}
   {% for tag in page.tags %}
-    {% for mypost in site.tags[tag] limit:3 %}
-      {% unless listed_posts_urls contains mypost.url %}
-        <li>
-          <h3><a href="{{ mypost.url | relative_url }}">{{ mypost.title }}</a></h3>
-        </li>
-        {% assign listed_posts_urls = listed_posts_urls | push: mypost.url %}
-      {% endunless %}
-    {% endfor %}
+    {% if related_posts_count < related_posts_limit %}
+      {% for mypost in site.tags[tag] limit:related_posts_limit %}
+        {% if related_posts_count < related_posts_limit %}
+          {% unless listed_posts_urls contains mypost.url %}
+            <li>
+              <h3><a href="{{ mypost.url | relative_url }}">{{ mypost.title }}</a></h3>
+            </li>
+            {% assign listed_posts_urls = listed_posts_urls | push: mypost.url %}
+            {% assign related_posts_count = related_posts_count | plus: 1 %}
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
   {% endfor %}
 {% endcapture %}
 {% assign related_post_items = related_post_items | strip %}
