@@ -4,7 +4,7 @@ title: "低电压透射电子显微镜（TEM）"
 author: "vhuuyt"
 categories: 显微镜
 tags: [低电压TEM,显微镜]
-image: TEM.png
+image: we.png
 weight: 2
 ---
 

@@ -4,7 +4,7 @@ title: "高分辨透射电子显微镜（HRTEM）"
 author: "vhuuyt"
 categories: 显微镜
 tags: [HRTEM,显微镜,内部微观,原子晶格,元素分布]
-image: TEM.png
+image: we.png
 weight: 3
 ---
 
